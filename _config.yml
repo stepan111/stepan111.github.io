@@ -34,9 +34,9 @@ plugins:
 collections:
   Architecture:
     output: true
-  terraform:
+  Terraform:
     output: true
-  ansible:
+  Ansible:
     output: true
   Hacks:
     output: true
