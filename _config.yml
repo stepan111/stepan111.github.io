@@ -16,7 +16,7 @@
 title: Stepan's blog
 email: stepan111@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Just a personal blog with notes about Software Design and infrastructure automation areas.
+  Just a personal blog with notes about Software Design and infrastructure automation.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://stepan111.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
