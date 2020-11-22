@@ -33,6 +33,7 @@ GEM
       sass (~> 3.4)
     jekyll-seo-tag (2.6.1)
       jekyll (>= 3.3, < 5.0)
+    jekyll-swiss (1.0.0)
     jekyll-theme-minimal (0.1.1)
       jekyll (~> 3.5)
       jekyll-seo-tag (~> 2.0)
@@ -74,6 +75,7 @@ PLATFORMS
 DEPENDENCIES
   jekyll (~> 3.9.0)
   jekyll-feed (~> 0.6)
+  jekyll-swiss
   jekyll-theme-minimal (~> 0.1.1)
   kramdown-parser-gfm
   tzinfo (~> 1.2)

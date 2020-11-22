@@ -24,22 +24,20 @@ github_username:  stepan111
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-minimal
+# theme: jekyll-theme-minimal
+# theme: jekyll-swiss
+remote_theme: broccolini/swiss
+theme_color: yellow
 plugins:
   - jekyll-feed
 
 collections:
-  architecture:
+  Architecture:
     output: true
-  hacks:
+  Hacks:
     output: true
 
-defaults:
-  - scope:
-      path: ""
-      type: "architecture"
-    values:
-      layout: "architecture"
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
