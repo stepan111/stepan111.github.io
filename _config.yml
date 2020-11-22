@@ -16,7 +16,7 @@
 title: Stepan's blog
 email: stepan111@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Just a personal blog with notes in Software Design and infrastructure automation areas.
+  Just a personal blog with notes about Software Design and infrastructure automation areas.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://stepan111.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
@@ -25,7 +25,7 @@ github_username:  stepan111
 # Build settings
 markdown: kramdown
 # theme: jekyll-theme-minimal
-# theme: jekyll-swiss
+theme: jekyll-swiss
 remote_theme: broccolini/swiss
 theme_color: yellow
 plugins:
@@ -33,6 +33,10 @@ plugins:
 
 collections:
   Architecture:
+    output: true
+  terraform:
+    output: true
+  ansible:
     output: true
   Hacks:
     output: true
