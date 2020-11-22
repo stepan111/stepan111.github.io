@@ -16,9 +16,7 @@
 title: Stepan's blog
 email: stepan111@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Just a personal blog with notes in Software Design and infrastructure automation areas.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://stepan111.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
@@ -30,7 +28,18 @@ theme: jekyll-theme-minimal
 plugins:
   - jekyll-feed
 
+collections:
+  architecture:
+    output: true
+  hacks:
+    output: true
 
+defaults:
+  - scope:
+      path: ""
+      type: "architecture"
+    values:
+      layout: "architecture"
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
