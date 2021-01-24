@@ -1,3 +1,11 @@
+---
+layout: post
+title:  " SOLID design principles in Terraform"
+categories: Architecture
+---
+
+
+
 ### Introduction
 
 In this article I would like to discuss the ability to use SOLID principles for terraform language. I assume that each principle may be adapted for terraform and I will provide examples for each one.
