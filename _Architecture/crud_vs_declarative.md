@@ -1,9 +1,11 @@
 
 ---
 layout: post
-title:  " CRUD vs Declarative in infrastructure"
+title:  "[ WIP ] CRUD vs Declarative in infrastructure"
 categories: Architecture
 ---
+
+
 
 
 CRUD process such as backup restore not allow to upgrade.
