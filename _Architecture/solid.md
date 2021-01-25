@@ -3,7 +3,7 @@ layout: post
 title:  " SOLID design principles in Terraform"
 categories: Architecture
 ---
-
+[ WIP ]
 
 
 ### Introduction
