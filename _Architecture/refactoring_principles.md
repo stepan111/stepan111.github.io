@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title:  "[ WIP ] Refactoring for declarative languages"

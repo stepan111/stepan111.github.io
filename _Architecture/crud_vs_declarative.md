@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title:  "[ WIP ] CRUD vs Declarative in infrastructure"
