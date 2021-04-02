@@ -65,5 +65,4 @@ watch iptables -nvL DOCKER
 
 ```
 
-Also remember regarding packet processing flow:
-![image](https://uk.wikipedia.org/wiki/Iptables#/media/%D0%A4%D0%B0%D0%B9%D0%BB:Netfilter-packet-flow.svg)
+Also remember regarding  [iptables packet processing flow](https://uk.wikipedia.org/wiki/Iptables#/media/%D0%A4%D0%B0%D0%B9%D0%BB:Netfilter-packet-flow.svg)
