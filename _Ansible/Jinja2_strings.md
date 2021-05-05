@@ -24,7 +24,7 @@ We can use jinja2 inside ansible strings:
         {{ "{% for x in (my_result.results | map(attribute='stdout')) " }}%}\
           {{ "{{ output.append( 'The result was: ' ~ x ) " }}}}\            
         {{ "{% endfor " }}%}\                                                                                                                   
-        {{ "{{output" }}}}"  
+        {{ "{{output " }}}}"  
 
 ```
 
@@ -49,22 +49,22 @@ ok: [host2]: => {
 
 True/False check :
 ```
- - { role: revitas-flexbi,   cognos_version: "{{ cognosVersion }}",
-      BIlicensedCustomer: "{{ True if 'analyzer' in subscription else False }}",
+ - { role: revitas-flexbi,   cognos_version: "{{ "{{ cognosVersion  " }}}}",
+      BIlicensedCustomer: "{{ "{{ True if 'analyzer' in subscription else False  " }}}}",
       tags: ['ecmbi'] }
 
 ```
 
 create dict inside jinja2:
 ```
-       recovery_keys: "{% set output = dict() %}
-                {% for line in init_out.stdout_lines -%}
-                  {% if line.find('Recovery Key') != -1 -%}
-                    {% set index =  output | length %}
-                    {% set _ = output.update( { 'recovery_key_' + index | string  : line.split(':')[1] | trim } )  %}
-                  {%- endif %}
-                {%- endfor %}
-                {{ output }}"
+       recovery_keys: "{{ "{% set output = dict()  " }}%}
+                {{ "{% for line in init_out.stdout_lines - " }}%}
+                  {{ "{% if line.find('Recovery Key') != -1 - " }}%}
+                    {{ "{% set index =  output | length  " }}%}
+                    {{ "{% set _ = output.update( { 'recovery_key_' + index | string  : line.split(':')[1] | trim } )   " }}%}
+                  {{ "{%- endif  " }}%}
+                {{ "{%- endfor  " }}%}
+                {{ "{{ output  " }}}}"
 
 ```
 
@@ -73,11 +73,11 @@ Set fact for all hosts in group:
 ```
       - name: Set hugememory value
           set_fact:
-            rac_hugememory: "{{ hugememory.stdout }}"
+            rac_hugememory: "{{ "{{ hugememory.stdout " }}}}"
 
-    - set_fact: rac_hugememories="{{ rac_hugememories | default([]) + [ hostvars[item]['rac_hugememory'] | int ] }}"
-      with_items: "{{ groups['ec2Oracle'] }}"
+    - set_fact: rac_hugememories="{{ "{{ rac_hugememories | default([]) + [ hostvars[item]['rac_hugememory'] | int ] " }}}}"
+      with_items: "{{ "{{ groups['ec2Oracle'] " }}}}"
 
-    - debug: msg="mem={{ rac_hugememories }}"
+    - debug: msg="mem={{ "{{ rac_hugememories " }}}}"
 
 ```
