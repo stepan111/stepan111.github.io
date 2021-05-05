@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title:  "Use locals to get clear syntax"

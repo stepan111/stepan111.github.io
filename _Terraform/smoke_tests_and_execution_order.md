@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title:  "Smoke test and blocking deployments"
