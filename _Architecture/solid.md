@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  " [ WIP ] SOLID design principles in Terraform"
+title:  "  SOLID design principles in Terraform"
 categories: Architecture
 ---
 
