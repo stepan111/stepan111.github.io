@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Jinja2 processing inside ansible strings"
+title:  "Jinja2 processing inside strings"
 categories: Ansible
 ---
 
@@ -9,6 +9,7 @@ Sometimes you have complex structures to process within your playbook. And writi
 In this we can use jinja2 templates to process almost anything within playbook. Here are example.
 
 We can use jinja2 inside ansible strings:
+
 ```
 - name: run some command                     
    command: echo item {{item}}
@@ -19,11 +20,12 @@ We can use jinja2 inside ansible strings:
      - 3                                                                                                                                
   - name: my debug
     debug:
-      msg: "{% set output = [] %}\
-        {% for x in (my_result.results | map(attribute='stdout')) %}\
-          {{ output.append( 'The result was: ' ~ x ) }}\            
-        {% endfor %}\                                                                                                                   
-        {{output}}"  
+      msg: "{{ "{% set output = [] " }}%}\
+        {{ "{% for x in (my_result.results | map(attribute='stdout')) " }}%}\
+          {{ "{{ output.append( 'The result was: ' ~ x ) " }}}}\            
+        {{ "{% endfor " }}%}\                                                                                                                   
+        {{ "{{output" }}}}"  
+
 ```
 
 Output will be:
