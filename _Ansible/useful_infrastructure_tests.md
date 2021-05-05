@@ -23,3 +23,4 @@ So here are example how to validate state of docker container  :
 
 ```
 Running [this kind of tests](https://docs.ansible.com/ansible/latest/reference_appendices/test_strategies.html#modules-that-are-useful-for-testing) for each component is crucial for delivering consistent infrastructure.
+In other words you need to automate smoke tests execution within ansible playbooks for each component.
