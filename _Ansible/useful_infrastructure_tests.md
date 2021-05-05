@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title:  "Tips for writing infrastructure tests"
@@ -24,3 +23,34 @@ So here are example how to validate state of docker container  :
 ```
 Running [this kind of tests](https://docs.ansible.com/ansible/latest/reference_appendices/test_strategies.html#modules-that-are-useful-for-testing) for each component is crucial for delivering consistent infrastructure.
 In other words you need to automate smoke tests execution within ansible playbooks for each component.
+
+And here are some more examples of various validations...
+
+Fail when line apears in stdout:
+```
+- fail: msg="There is conflicts {{ outer_item.patchid }}"
+     when: 'oracle_conflict_patches.stdout is search("Prereq.+failed")'
+
+```
+
+And even multiple conditions:
+
+```
+register: ecmf_configmigrate
+  failed_when: >
+    ( not ecmf_configmigrate.stdout | regex_search("^BUILD SUCCESSFUL", multiline=True) ) and
+    ("No such file or directory" not in ecmf_configmigrate.stdout )
+  changed_when: >
+    (  ecmf_configmigrate.stdout | regex_search("^BUILD SUCCESSFUL", multiline=True) )
+
+```
+
+[Assert](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/assert_module.html) also helps:
+```
+  - name: Assert that token configured correctly
+    assert:
+      that:
+        - vault_token | length > 1
+        - vault_token is regex("^s\.\w+$")
+
+```
