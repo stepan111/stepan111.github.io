@@ -13,3 +13,13 @@ Here are some clean code principles that can be used for declarative languages:
 * YAGNI - Minimizes the number of entities
 * SOLID - choose abstractions and interfaces properly
 * Automate  your linter usage
+
+
+
+When you creating module with arguments always try to set default values for that arguments!
+
+
+As for me the most complex is to keep configurations DRY. Here are some useful features on this topic:
+* terraform modules
+* terragrunt
+* moudule params
