@@ -76,6 +76,10 @@ In a Byzantine fault, a component such as a server can inconsistently appear bot
 
 Byzantine fault tolerance (BFT) is the dependability of a fault-tolerant computer system to such conditions. [Wiki](https://en.wikipedia.org/wiki/Byzantine_fault)
 
+### consensus algorithm
+A fundamental problem in distributed computing and multi-agent systems is to achieve overall system reliability in the presence of a number of faulty processes. This often requires coordinating processes to reach consensus, or agree on some data value that is needed during computation. Example applications of consensus include agreeing on what transactions to commit to a database in which order, state machine replication, and atomic broadcasts.
+
+
 ### edge cases
 An edge case is a problem or situation that occurs only at an extreme (maximum or minimum) operating parameter. For example, a stereo speaker might noticeably distort audio when played at maximum volume, even in the absence of any other extreme setting or condition. [Wiki](https://en.wikipedia.org/wiki/Edge_case)
 
