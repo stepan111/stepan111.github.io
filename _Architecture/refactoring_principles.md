@@ -24,6 +24,12 @@ As for me the most complex is to keep configurations DRY. Here are some useful f
 * terragrunt
 * module params
 
+When you develop your infrastructure from scratch you may need next components(IaC modules/code structure):
+* Network Layer - this will contain all automation to create and configure your network resources(VPC,subnets,jump-hosts,VPN,etc.). Network layer is essential and always be provisioned first.
+* Secret storage - You want to have secret storage which will keep at least persistent secrets. For example hashicorp vault.
+* Shared Config - you will need a shared configuration storage/discovery system for your infrastructure code. Multiple modules/projects will refer it during execution. Simple example - JSON config included in all projects. Consul or etcd will be more advanced solution. You may choose any to your needs.
+* Compute resources - this is main modules which will contain your infrastructure services( Databases, miscellaneous apps, etc. ).  I suppose this will be modules that you change most.
+* Persistant resources - modules/projects that define resources refered by compute (storage for backups, policies and service accounts, etc.)
 
 Here are my thoughts on module composition for IaC. Initially I was thinking that having one large json config would be more convenient than defining vars in each module. It may help to share data between modules. And for some cases it worked. Now I want to decide what data should be kept in a shared json and what should be defined in a module.
 
