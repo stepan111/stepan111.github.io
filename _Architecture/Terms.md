@@ -97,3 +97,7 @@ A source-control branching model, where developers collaborate on code in a sing
 
 ### Configuration drift
 Configuration drift is a data center environment term. At a high level, configuration drift happens when production or primary hardware and software infrastructure configurations “drift” or become different in some way from a recovery or secondary configuration or visa versa. [Source](https://www.continuitysoftware.com/blog/it-resilience/what-is-configuration-drift)
+
+
+### Progressive delivery
+It is essentially a modified version of continuous delivery – in fact, before the term “progressive delivery”, many people called it “continuous delivery ++” – with two core differences. First: progressive delivery teams use feature flags to increase speed and decrease deployment risk. Second: they implement a gradual process for both rollout and ownership.[Source](https://www.split.io/glossary/progressive-delivery/)
