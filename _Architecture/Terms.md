@@ -101,3 +101,7 @@ Configuration drift is a data center environment term. At a high level, configur
 
 ### Progressive delivery
 It is essentially a modified version of continuous delivery – in fact, before the term “progressive delivery”, many people called it “continuous delivery ++” – with two core differences. First: progressive delivery teams use feature flags to increase speed and decrease deployment risk. Second: they implement a gradual process for both rollout and ownership.[Source](https://www.split.io/glossary/progressive-delivery/)
+
+
+### Soft deletes
+With the soft delete design pattern, you add a bit column like IsDeleted, IsActive, or IsArchived to the table, and instead of deleting rows, you flip the bit column.
