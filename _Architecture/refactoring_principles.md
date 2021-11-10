@@ -44,3 +44,5 @@ Now lets focus which settings will overload shared configuration and better to k
 * Feature toggles. Initially I thought that it would better describe the component. In fact it just creates additional lines that you want to scroll each time you are working with a shared configuration file. Now i am going to move this setting into modules with default settings.
 
 Also in case of blue/green k8s clusters you definitely want to have one terraform project for provisioning both envs with help of `terragrunt`. Similar is relevant for STAGE to PROD changes transition.
+
+And few thoughts regarding git repos. Having one large environment config and your code in same repo may be tricky for some cases. It creates some kind of race condition between 2 or more developers doing something in separate branches. This is similar to [gitops problems  - having one branch per environment](https://www.thoughtworks.com/radar/techniques/gitops). 
