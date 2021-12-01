@@ -25,6 +25,7 @@ CKS Curriculum
       https://kubernetes.io/docs/tasks/administer-cluster/securing-a-cluster/#restricting-network-access
 
     * Use CIS benchmark to review the security configuration of Kubernetes components (etcd, kubelet, kubedns, kubeapi)
+       https://kubernetes.io/docs/reference/command-line-tools-reference/kube-apiserver/
 ```
      kubelet:
         Make sure --anonymous-auth is not set to true.
@@ -79,6 +80,8 @@ CKS Curriculum
    * Manage kubernetes secrets
       Encrypt secrets in etcd  ???
       https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/
+      https://kubernetes.io/docs/tasks/administer-cluster/configure-upgrade-etcd/#securing-communication
+
    * Use container runtime sandboxes in multi-tenant environments (e.g. gvisor, kata containers)
       k get runtimeclass
       https://kubernetes.io/docs/concepts/containers/runtime-class/
@@ -103,6 +106,7 @@ CKS Curriculum
    * Detect threats within physical infrastructure, apps, networks, data, users and workloads
    * Detect all phases of attack regardless where it occurs and how it spreads
    * Perform deep analytical investigation and identification of bad actors within environment
+      https://kubernetes.io/docs/tasks/run-application/access-api-from-pod/
    * Ensure immutability of containers at runtime
       "readOnly" volume mount
       "ReadOnlyRootFilesystem" (securityContext, PSP) https://kubernetes.io/docs/concepts/policy/pod-security-policy/#volumes-and-file-systems
