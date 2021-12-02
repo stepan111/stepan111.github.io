@@ -32,6 +32,8 @@ plugins:
   - jekyll-feed
 
 collections:
+  Certifications:
+    output: true
   Architecture:
     output: true
   Terraform:
