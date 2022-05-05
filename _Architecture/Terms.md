@@ -105,3 +105,6 @@ It is essentially a modified version of continuous delivery – in fact, before 
 
 ### Soft deletes
 With the soft delete design pattern, you add a bit column like IsDeleted, IsActive, or IsArchived to the table, and instead of deleting rows, you flip the bit column.
+
+### Dogpile effect or cache stampede
+It is referred to as that event that occurs in high loaded systems when the cache expires (or invalidated) and multiple requests are hit to the website at the same time. The most common way of preventing dogpiling is by implementing semaphore locks in the cache. When the cache expires in this system, the first process to acquire the lock would generate the new value to the cache.
