@@ -27,7 +27,7 @@ markdown: kramdown
 # theme: jekyll-theme-minimal
 theme: jekyll-swiss
 remote_theme: broccolini/swiss
-theme_color: yellow
+theme_color: white
 plugins:
   - jekyll-feed
 
