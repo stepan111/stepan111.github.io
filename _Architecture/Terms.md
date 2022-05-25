@@ -108,3 +108,6 @@ With the soft delete design pattern, you add a bit column like IsDeleted, IsActi
 
 ### Dogpile effect or cache stampede
 It is referred to as that event that occurs in high loaded systems when the cache expires (or invalidated) and multiple requests are hit to the website at the same time. The most common way of preventing dogpiling is by implementing semaphore locks in the cache. When the cache expires in this system, the first process to acquire the lock would generate the new value to the cache.
+
+### Dead Man’s Switch
+Alert that is always firing. Some actions should be performed if we see no alert. Original [wiki](https://en.wikipedia.org/wiki/Dead_man%27s_switch)
