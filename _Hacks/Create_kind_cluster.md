@@ -51,17 +51,34 @@ provider "helm" {
     config_context = "kind-cluster"
     config_path    = "~/.kube/config"
   }
-
 }
-
 
 provider "kubernetes" {
   config_context = "kind-cluster"
   config_path    = "~/.kube/config"
 }
 
+provider "kubectl" {
+  config_context = "kind-cluster"
+  config_path    = "~/.kube/config"
+}
 ```
-### and `registry.tf` :
+
+### and `backend.tf`:
+```
+terraform {
+
+  required_providers {
+    kubectl = {
+      source  = "registry.terraform.io/gavinbunney/kubectl"
+      version = ">= 1.10.0"
+    }
+  }
+}
+
+```
+
+### 4. Create `registry.tf` :
 ```
 resource "helm_release" "registry" {
   name              = "registry"
@@ -83,13 +100,13 @@ resource "helm_release" "registry" {
 
 ```
 
-### 4. Apply terraform:
+### 5. Apply terraform:
 ```
 alias tf=terraform
 tf init
 tf apply
 ```
-### 5. Update podman config (Using podman because it is default for ubuntu nowadays). Create `$HOME/.config/containers/registries.conf` with next content:
+### 6. Update podman config (Using podman because it is default for ubuntu nowadays). Create `$HOME/.config/containers/registries.conf` with next content:
 ```
 [[registry]]
 location="registry-docker-registry.registry:5000"
@@ -97,7 +114,7 @@ insecure=truepodman
 ```
 
 
-### 6. Verify it's working:
+### 7. Verify it's working:
 
 ```
 alias k=kubectl
