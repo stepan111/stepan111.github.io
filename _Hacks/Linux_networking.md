@@ -4,7 +4,7 @@ title:  "Linux Networking"
 categories: Hacks
 ---
 
- > In Linux, by default, packets are considered individually for routing purposes. Thus, all the routing algorithm determines where to send a packet based on that packet itself, without taking into consideration that the packet may be a response packet of sorts.
+> In Linux, by default, packets are considered individually for routing purposes. Thus, all the routing algorithm determines where to send a packet based on that packet itself, without taking into consideration that the packet may be a response packet of sorts.
 > In a typical setup, this means that all outgoing traffic is going out over one interface, say, eth0 even if the incoming packet was sent to interface eth1.
 
     <div style="text-align: right"> [softpanorama](http://www.softpanorama.org/Net/Internet_layer/Routing/martian_source.shtml)</div>
