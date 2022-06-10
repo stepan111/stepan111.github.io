@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Deploy minio to local Kind cluster with terraform"
+title:  "Deploy <b>Minio</b> to local Kind cluster with terraform"
 categories: Hacks
 ---
 

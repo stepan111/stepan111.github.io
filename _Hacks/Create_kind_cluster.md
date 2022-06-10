@@ -108,6 +108,7 @@ tf apply
 ```
 ### 6. Update podman config (Using podman because it is default for ubuntu nowadays). Create `$HOME/.config/containers/registries.conf` with next content:
 ```
+unqualified-search-registries = ["docker.io"]
 [[registry]]
 location="registry-docker-registry.registry:5000"
 insecure=truepodman 
