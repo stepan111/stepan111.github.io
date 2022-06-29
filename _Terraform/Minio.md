@@ -8,7 +8,7 @@ categories: Hacks
 
 
 ## Steps:
-### 0. Create cluster as described [here](/Hacks/Create_kind_cluster.html)
+### 0. Create cluster as described [here](/Terraform/Create_kind_cluster.html)
 ### 1. Create `minio.tf`:
 ```
 resource "helm_release" "minio_operator" {
