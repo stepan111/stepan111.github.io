@@ -4,7 +4,6 @@ title:  "Deploy Minio to local Kind cluster with terraform"
 categories: Hacks
 ---
 
-# TBD
 
 
 ## Steps:
